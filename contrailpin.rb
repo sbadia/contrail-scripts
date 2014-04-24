@@ -48,13 +48,17 @@ if yml_conf
   yml = YAML.load_file(yml_conf)
 else
   nok.root.xpath('//project').each do |p|
-    if date
+    if date != (Time.now.strftime "%Y-%m-%d")
       a = JSON.load(RestClient.get "#{Proto}://#{Ghapi}/repos/#{Owner}/#{p['name']}/commits?until=#{date}T00:00:00Z&page=1&per_page=1")
       sha = a[0]['sha']
       pconf = pconf.merge({"#{p['name']}" => "#{sha}"})
     else
-      a = JSON.load(RestClient.get "#{Proto}://#{Ghapi}/repos/#{Owner}/#{p['name']}/git/refs/#{refs}")
-      sha = a['object']['sha']
+      begin
+        res = RestClient.get "#{Proto}://#{Ghapi}/repos/#{Owner}/#{p['name']}/git/refs/#{refs}"
+      rescue
+        res = RestClient.get "#{Proto}://#{Ghapi}/repos/#{Owner}/#{p['name']}/git/refs/heads/master"
+      end
+      sha = JSON.load(res)['object']['sha']
       pconf = pconf.merge({"#{p['name']}" => "#{sha}"})
     end
     puts "Projet: #{p['name']} => sha: #{sha}"
