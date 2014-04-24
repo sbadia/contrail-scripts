@@ -27,9 +27,9 @@ Proto = 'https'
 Ghapi = 'api.github.com'
 Owner = 'Juniper'
 
-# Timestamp au format ISO 8601
-# 2014-04-22T00:00:00Z
-date = ENV['DATE'] # 2014-04-22
+# Timestamp au format ISO 8601 (2014-04-22T00:00:00Z)
+# 2014-04-22
+date = ENV['DATE'] ? ENV['DATE'] : (Time.now.strftime "%Y-%m-%d")
 
 # Contrail VNC file (for repo)
 # https://github.com/Juniper/contrail-vnc
@@ -43,12 +43,6 @@ refs = ENV['REF'] ? "tags/v#{ENV['REF']}" : 'heads/master'
 
 pconf = {}
 nok = Nokogiri::XML(File.open(vnc))
-
-if date
-  time = date
-else
-  time = Time.now.strftime "%Y-%m-%d"
-end
 
 if yml_conf
   yml = YAML.load_file(yml_conf)
@@ -66,7 +60,7 @@ else
     puts "Projet: #{p['name']} => sha: #{sha}"
   end
   yml = YAML.load(pconf.to_yaml)
-  File.open("/tmp/contrail_#{time}.yml", 'w') {|f| f.write pconf.to_yaml }
+  File.open("/tmp/contrail_#{date}.yml", 'w') {|f| f.write pconf.to_yaml }
 end
 
 nok.root.xpath('//project').each do |p|
