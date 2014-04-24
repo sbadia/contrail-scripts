@@ -33,10 +33,13 @@ date = ENV['DATE'] # 2014-04-22
 
 # Contrail VNC file (for repo)
 # https://github.com/Juniper/contrail-vnc
-vnc = ENV['VNC'] || '../contrail-vnc/noauth.xml'
+vnc = ENV['VNC'] || '/home/sbadia/dev/github.com/sbadia/contrail-vnc/noauth.xml'
 
 # YAML vnc configuration file (with sha)
 yml_conf = ENV['YML']
+
+# Refs objects https://developer.github.com/v3/git/refs/
+refs = ENV['REF'] ? "tags/v#{ENV['REF']}" : 'heads/master'
 
 pconf = {}
 nok = Nokogiri::XML(File.open(vnc))
@@ -56,7 +59,7 @@ else
       sha = a[0]['sha']
       pconf = pconf.merge({"#{p['name']}" => "#{sha}"})
     else
-      a = JSON.load(RestClient.get "#{Proto}://#{Ghapi}/repos/#{Owner}/#{p['name']}/git/refs/heads/master")
+      a = JSON.load(RestClient.get "#{Proto}://#{Ghapi}/repos/#{Owner}/#{p['name']}/git/refs/#{refs}")
       sha = a['object']['sha']
       pconf = pconf.merge({"#{p['name']}" => "#{sha}"})
     end
