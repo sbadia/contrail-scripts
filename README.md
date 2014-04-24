@@ -7,6 +7,7 @@ OpenContrail Scripts
 Contrailpin is a little script to generate a [repo config](https://code.google.com/p/git-repo/) config file. With pinned sha/tags.
 
 ### Modes
+
 #### Fixed date mode
 
 Init contrail sandbox with the state of all repo at 2014-03-01
@@ -23,6 +24,16 @@ Init contrail sandbox with the latest trunk state
 
 ```ruby
 VNC=../../../contrail-vnc/noauth.xml ruby contrailpin.rb
+```
+
+See `/tmp/manifest.xml`
+
+#### Using a tag refs.
+
+Init contrail sandbox with a tag reference.
+
+```ruby
+VNC=../../../contrail-vnc/noauth.xml REF=1.05 ruby contrailpin.rb
 ```
 
 See `/tmp/manifest.xml`
