@@ -1,0 +1,17 @@
+http://ftp.de.debian.org/debian/pool/main/p/python-thrift/python-thrift_0.9.0-1_amd64.deb
+http://ftp.de.debian.org/debian/pool/main/k/kazoo/python-kazoo_1.3.1-1_all.deb
+http://ftp.de.debian.org/debian/pool/main/s/stevedore/python-stevedore_0.14.1-1_all.deb
+http://ftp.de.debian.org/debian/pool/main/l/lxml/python-lxml_3.3.1-1~bpo70+1_amd64.deb
+http://de.archive.ubuntu.com/ubuntu/pool/universe/p/python-bitarray/python-bitarray_0.8.0-2_amd64.deb
+http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pycassa/python-pycassa_1.11.0-1_all.deb
+http://de.archive.ubuntu.com/ubuntu/pool/universe/p/python-xmltodict/python-xmltodict_0.9.0-1_all.deb
+http://de.archive.ubuntu.com/ubuntu/pool/universe/p/python-bottle/python-bottle_0.11.6-1_all.deb
+http://de.archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/python_2.7.5-5ubuntu1_amd64.deb
+http://de.archive.ubuntu.com/ubuntu/pool/main/p/python-defaults/libpython-stdlib_2.7.5-5ubuntu1_amd64.deb
+http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7-stdlib_2.7.5-8ubuntu3.1_amd64.deb
+http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/libpython2.7-minimal_2.7.5-8ubuntu3.1_amd64.deb
+http://security.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7-minimal_2.7.5-8ubuntu3.1_amd64.deb
+http://launchpadlibrarian.net/130365193/python-requests_1.1.0-1_all.deb
+http://launchpadlibrarian.net/121806383/python-urllib3_1.5-0ubuntu1_all.deb
+http://ppa.launchpad.net/opencontrail/ppa/ubuntu/pool/main/p/python-ncclient/python-ncclient_0.4.1-1ubuntu1_all.deb
+http://ppa.launchpad.net/opencontrail/ppa/ubuntu/pool/main/p/python-geventhttpclient/python-geventhttpclient_1.1.0-1ubuntu1_all.deb
