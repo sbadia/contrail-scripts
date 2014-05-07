@@ -28,9 +28,9 @@ VNC=../../../contrail-vnc/noauth.xml ruby contrailpin.rb
 
 See `/tmp/manifest.xml`
 
-#### Using a tag refs.
+#### Using a tree refs.
 
-Init contrail sandbox with a tag reference.
+Init contrail sandbox with a tree reference.
 
 ```ruby
 VNC=../../../contrail-vnc/noauth.xml REF=1.05 ruby contrailpin.rb
