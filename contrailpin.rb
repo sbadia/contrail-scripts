@@ -39,7 +39,9 @@ vnc = ENV['VNC'] || '/home/sbadia/dev/github.com/sbadia/contrail-vnc/noauth.xml'
 yml_conf = ENV['YML']
 
 # Refs objects https://developer.github.com/v3/git/refs/
-refs = ENV['REF'] ? "tags/v#{ENV['REF']}" : 'heads/master'
+# refs/heads/R1.06
+# refs/tags/v1.06
+refs = ENV['REF'] ? "heads/R#{ENV['REF']}" : 'heads/master'
 
 pconf = {}
 nok = Nokogiri::XML(File.open(vnc))
