@@ -33,7 +33,7 @@ See `/tmp/manifest.xml`
 Init contrail sandbox with a tree reference.
 
 ```ruby
-VNC=../../../contrail-vnc/noauth.xml REF=1.05 ruby contrailpin.rb
+VNC=../../../contrail-vnc/noauth.xml REF=1.06 ruby contrailpin.rb
 ```
 
 See `/tmp/manifest.xml`

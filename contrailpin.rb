@@ -33,7 +33,7 @@ date = ENV['DATE'] ? ENV['DATE'] : (Time.now.strftime "%Y-%m-%d")
 
 # Contrail VNC file (for repo)
 # https://github.com/Juniper/contrail-vnc
-vnc = ENV['VNC'] || '/home/sbadia/dev/github.com/sbadia/contrail-vnc/noauth.xml'
+vnc = ENV['VNC'] || './noauth.xml'
 
 # YAML vnc configuration file (with sha)
 yml_conf = ENV['YML']
