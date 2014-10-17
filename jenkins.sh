@@ -18,7 +18,8 @@ apt-get install -y patch scons flex bison make vim unzip libexpat-dev \
   build-essential libtool libevent-dev libxml2-dev libxslt-dev \
   uml-utilities redis-server ant default-jdk liblog4j1.2-java \
   libhttpcore-java libcommons-codec-java javahelper quilt python-all \
-  debhelper python-setuptools devscripts git curl python-lxml
+  debhelper python-setuptools devscripts git curl python-lxml \
+  libprotobuf-dev libxml2-utils protobuf-compiler python-sphinx ruby-ronn
 
 # Use google repo tool
 if [[ ! -f ${here}/bin/repo ]]; then
