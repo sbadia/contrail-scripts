@@ -33,8 +33,8 @@ git config --global user.email 'dev@lists.opencontrail.org'
 
 # Init Repo config
 ${here}/bin/repo init -u git://github.com/Juniper/contrail-vnc.git
-curl -s http://pub.sebian.fr/pub/noauth_R1.06.xml > .repo/manifests/noauth_R1.06.xml
-${here}/bin/repo sync --no-clone-bundle -m noauth_R1.06.xml
+curl -s http://pub.sebian.fr/pub/noauth_R1.10.xml > .repo/manifests/noauth_R1.10.xml
+${here}/bin/repo sync --no-clone-bundle -m noauth_R1.10.xml
 
 
 # Fetch third_party
