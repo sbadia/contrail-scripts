@@ -23,6 +23,13 @@ apt-get install -y patch scons flex bison make vim unzip libexpat-dev \
   debhelper python-setuptools devscripts git curl python-lxml \
   libprotobuf-dev libxml2-utils protobuf-compiler python-sphinx ruby-ronn
 
+if [ "$(lsb_release -cs)" = "trusty" ]; then
+apt-get install -y libboost-dev libboost-chrono-dev libboost-date-time-dev \
+  libboost-filesystem-dev libboost-program-options-dev libboost-python-dev \
+  libboost-regex-dev libboost-system-dev libboost-thread-dev google-mock \
+  libgoogle-perftools-dev liblog4cplus-dev libtbb-dev libhttp-parser-dev libicu-dev
+fi
+
 # Use google repo tool
 if [[ ! -f ${here}/bin/repo ]]; then
   curl -s http://commondatastorage.googleapis.com/git-repo-downloads/repo > ${here}/bin/repo
