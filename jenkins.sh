@@ -14,6 +14,7 @@ fi
 mkdir -p $sand ${here}/bin && cd $sand
 
 # Build deps.
+apt-get update
 apt-get install -y patch scons flex bison make vim unzip libexpat-dev \
   libgettextpo0 libcurl4-openssl-dev python-dev autoconf automake \
   build-essential libtool libevent-dev libxml2-dev libxslt-dev \
