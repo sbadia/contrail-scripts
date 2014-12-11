@@ -31,6 +31,10 @@ apt-get install -y libboost-dev libboost-chrono-dev libboost-date-time-dev \
   libgoogle-perftools-dev liblog4cplus-dev libtbb-dev libhttp-parser-dev libicu-dev
 fi
 
+# Tmp fix (need a decision on http://lists.opencontrail.org/pipermail/dev_lists.opencontrail.org/2014-December/001819.html)
+wget -q https://launchpad.net/~opencontrail/+archive/ubuntu/ppa/+files/libipfix_110209-1_amd64.deb
+dpkg -i libipfix_110209-1_amd64.deb
+
 # Use google repo tool
 if [[ ! -f ${here}/bin/repo ]]; then
   curl -s http://commondatastorage.googleapis.com/git-repo-downloads/repo > ${here}/bin/repo
