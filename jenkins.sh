@@ -21,7 +21,8 @@ apt-get install -y patch scons flex bison make vim unzip libexpat-dev \
   uml-utilities redis-server ant default-jdk liblog4j1.2-java \
   libhttpcore-java libcommons-codec-java javahelper quilt python-all \
   debhelper python-setuptools devscripts git curl python-lxml \
-  libprotobuf-dev libxml2-utils protobuf-compiler python-sphinx ruby-ronn
+  libprotobuf-dev libxml2-utils protobuf-compiler python-sphinx \
+  libsnmp-python ruby-ronn
 
 if [ "$(lsb_release -cs)" = "trusty" ]; then
 apt-get install -y libboost-dev libboost-chrono-dev libboost-date-time-dev \
